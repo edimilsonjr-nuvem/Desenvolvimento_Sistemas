@@ -34,7 +34,11 @@ public class ListaConvidados {
 				System.out.println("Digite o novo nome: ");
 				novoNome = leia.nextLine();
 				
-				convidados.set(posicao, novoNome);
+				 if (posicao >= 0 && posicao < convidados.size()) {
+                     convidados.set(posicao, novoNome);
+                 } else {
+                     System.out.println("Posicao invalida");
+                 }
 				break;
 			case 3:
 				System.out.println("Solicite um nome para a remoção: ");
